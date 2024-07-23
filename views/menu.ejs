@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+  <h1>Full Menu</h1>
+
+<h2>Mains</h2>
+<% mains.forEach(main => { %>
+  <p><strong><%= main.name %></strong></p>
+  <li>Price: $<%= main.price %></li>
+  <li>Rating: <%= main.rating %></li>
+  <li>Description: <%= main.details %></li>
+  <% }) %>
+
+<h2>Sides</h2>
+<% sides.forEach(side => { %>
+  <p><strong><%= side.name %></strong></p>
+  <li>Price: $<%= side.price %></li>
+  <li>Rating: <%= side.rating %></li>
+  <li>Description: <%= side.details %></li>
+  <% }) %>
+
+
+<h2>Desserts</h2>
+<% desserts.forEach(dessert => { %>
+  <p><strong><%= dessert.name %></strong></p>
+  <li>Price: $<%= dessert.price %></li>
+  <li>Rating: <%= dessert.rating %></li>
+  <li>Description: <%= dessert.details %></li>
+  <% }) %>
+
+</body>
+</html>
